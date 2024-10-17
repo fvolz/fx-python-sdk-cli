@@ -5,7 +5,7 @@ import uuid
 import base64   # in python
 import yaml     # MIT
 
-from utils import make_create_secure_asset_body, create_generic_Access_PolicyDefinitionRequest_body, create_generic_Usage_PolicyDefinitionRequest_body, create_generic_ContractDefinitionRequest_body, print_edc_assets
+from .utils import make_create_secure_asset_body, create_generic_Access_PolicyDefinitionRequest_body, create_generic_Usage_PolicyDefinitionRequest_body, create_generic_ContractDefinitionRequest_body, print_edc_assets
 
 # --- variables ---
 with open('provider_cfg.yaml', 'r') as file:

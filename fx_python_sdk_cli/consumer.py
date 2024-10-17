@@ -5,8 +5,7 @@ import base64   # in python
 import yaml     # MIT
 import json
 
-from utils import get_data_offer, offer2et, create_poc_ContractRequest_body
-from utils import str_edc_catalog
+from .utils import get_data_offer, offer2et, create_poc_ContractRequest_body, str_edc_catalog
 
 # --- variables ---
 with open('consumer_cfg.yaml', 'r') as file:
