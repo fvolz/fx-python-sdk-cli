@@ -1,5 +1,7 @@
 # FX Python SDK with CLI
 
+Usage: pip install fx_python_sdk_cli
+
 Enter Provider / Consumer FX-Port details in the config files.
 
 Use CLI as provider:
