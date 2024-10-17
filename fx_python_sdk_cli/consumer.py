@@ -4,11 +4,15 @@ from requests.auth import HTTPBasicAuth
 import base64   # in python
 import yaml     # MIT
 import json
+import os
 
 from .utils import get_data_offer, offer2et, create_poc_ContractRequest_body, str_edc_catalog
 
+current_dir = os.path.dirname(os.path.abspath(__file__))
+yaml_file_path = os.path.join(current_dir, 'consumer_cfg.yaml')
+
 # --- variables ---
-with open('consumer_cfg.yaml', 'r') as file:
+with open(yaml_file_path, 'r') as file:
     consumer_cfg = yaml.safe_load(file)
 
 # - control plane -
@@ -24,7 +28,7 @@ object_of_agreement = 'MB-DSCS'#'simple_test' # we 'magically' know this due to 
 def get_edrs_for_object(object_of_agreement):
     # see if there are some edrs which have been negotiated for
     # Load the JSON from the file
-    with open('agreement_body.json', 'r') as f:
+    with open(os.path.join(current_dir, 'agreement_body.json'), 'r') as f:
         loaded_agreement_body = json.load(f)
 
     # Replace the placeholder with the actual object of agreement
@@ -57,7 +61,7 @@ def get_data(et_dict):
 def request_assets_from_provider():
      # obtain all offers from the data provider using a catalog request:
     # Load the JSON from the file
-    with open('catalog_request_body', 'r') as f:
+    with open(os.path.join(current_dir, 'catalog_request_body'), 'r') as f:
         loaded_catalog_request_body = json.load(f)
     # Replace the placeholders with actual values
     loaded_catalog_request_body["counterPartyId"] = edc_provider_bpn

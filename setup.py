@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="fx-python-sdk-cli",
-    version="0.1.2",
+    version="0.1.3",
     author="FX",
     author_email="fx@fx.com",
     description="Interact with FX Port to share / retrieve AAS Submodel",

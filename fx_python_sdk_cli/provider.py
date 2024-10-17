@@ -4,11 +4,15 @@ from requests.auth import HTTPBasicAuth
 import uuid
 import base64   # in python
 import yaml     # MIT
+import os
 
 from .utils import make_create_secure_asset_body, create_generic_Access_PolicyDefinitionRequest_body, create_generic_Usage_PolicyDefinitionRequest_body, create_generic_ContractDefinitionRequest_body, print_edc_assets
 
+current_dir = os.path.dirname(os.path.abspath(__file__))
+yaml_file_path = os.path.join(current_dir, 'provider_cfg.yaml')
+
 # --- variables ---
-with open('provider_cfg.yaml', 'r') as file:
+with open(yaml_file_path, 'r') as file:
     provider_cfg = yaml.safe_load(file)
 
 # - control plane -
