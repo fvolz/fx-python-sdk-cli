@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name="fx-python-sdk-cli",
-    version="0.1.5",
+    version="0.1.6",
     author="FX",
     author_email="fx@fx.com",
     description="Interact with FX Port to share / retrieve AAS Submodel",
@@ -13,6 +13,7 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/fvolz/fx-python-sdk-cli",
     packages=find_packages(),
+    include_package_data=True,
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: Apache Software License",
