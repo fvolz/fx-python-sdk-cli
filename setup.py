@@ -4,14 +4,14 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name="fx_python_sdk",
+    name="fx-python-sdk-cli",
     version="0.1.0",
     author="FX",
     author_email="fx@fx.com",
     description="Interact with FX Port to share / retrieve AAS Submodel",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/your_username/your_package_name",
+    url="https://github.com/fvolz/fx-python-sdk-cli",
     packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
