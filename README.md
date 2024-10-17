@@ -1,8 +1,8 @@
 # FX Python SDK with CLI
 
-Usage: pip install fx_python_sdk_cli
+Usage: `pip install fx_python_sdk_cli`
 
-Enter Provider / Consumer FX-Port details in the config files.
+Enter Provider / Consumer FX-Port details in the config files `consumer_cfg` and `provider_cfg`.
 
 Use CLI as provider:
 - Get own EDC Assets
